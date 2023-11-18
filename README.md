@@ -7,7 +7,8 @@
 
 - 얼굴 종류 2개, 눈의 종류 8개, 입의 종류 8개로 자신만의 캐릭터를 만들기
 - fuse X를 통해 작성한 코드입니다.
-- iPhone 6/7, iPhone 6/7 Plus, iPhone 5/5S, iPad Retina, Sony Xperia Z3, Samsung Galaxy S6 Edge,Google Nexus 9의 핸드폰 화면 규격에서도 사용 가능합니다.
+- fuse X 핸드폰 어플로는
+  iPhone 6/7, iPhone 6/7 Plus, iPhone 5/5S, iPad Retina, Sony Xperia Z3, Samsung Galaxy S6 Edge,Google Nexus 9 핸드폰 규격에서 사용가능합니다.
 
 ## 기여
 
