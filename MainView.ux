@@ -1,0 +1,467 @@
+<App>
+	<Font File="yangfont05.ttf" ux:Global="text1" />
+	<JavaScript>
+	module.exports={
+		gotofirst:function(){myrouter.goto("page1")},
+		gotosecond:function(){myrouter.goto("page2")},
+		gotothird:function(){myrouter.goto("page3")},
+		gotofourth:function(){myrouter.goto("seye1")},
+		gotofifth:function(){myrouter.goto("seye2")},
+		gotosixth:function(){myrouter.goto("seye3")},
+		gotoseventh:function(){myrouter.goto("seye4")},
+		gotoeighth:function(){myrouter.goto("seye5")},
+		gotoninth:function(){myrouter.goto("seye6")},
+		gototenth:function(){myrouter.goto("seye7")},
+		gotoelevnth:function(){myrouter.goto("seye8")},
+		gototwelfth:function(){myrouter.goto("page4")},
+		gotothirteenth:function(){myrouter.goto("peye1")},
+		gotofourteenth:function(){myrouter.goto("peye2")},
+		gotofifteenth:function(){myrouter.goto("peye3")},
+		gotosixteenth:function(){myrouter.goto("peye4")},
+		gotoseventeenth:function(){myrouter.goto("peye5")},
+		gotoeighteenth:function(){myrouter.goto("peye6")},
+		gotonineteenth:function(){myrouter.goto("peye7")},
+		gototwentieth:function(){myrouter.goto("peye8")}
+		};
+	
+	</JavaScript>
+
+	<Router ux:Name="myrouter">
+	</Router>
+
+	<Navigator DefaultPath="page1">
+
+	<Panel ux:Template="page1" Color="#8CB293">
+		<Image File="감자돌이.png" Alignment="CenterRight" Height="100" Y="-150" Width="80" X="-20" />
+		<Image File="고구마돌이.png" Width="100" Height="100" Alignment="CenterLeft" X="20" Y="-50" />
+		<Text Font="text1" Value="내 얼굴을" Alignment="CenterLeft" Y="-150" FontSize="80" TextColor="#EEFCFB" X="10" />
+		<Text Font="text1" Value="만들어봐!" TextColor="#25284F" FontSize="80" Alignment="CenterRight" Y="-50" X="-10" />
+		<Rectangle Clicked="{gotosecond}" Color="#F12C2C" Width="300" Height="100" Alignment="Center" Y="100" CornerRadius="30">
+			<Text Value="시작" Font="text1" Alignment="Center" TextColor="#EEFCFB" FontSize="50" />
+		</Rectangle>
+	</Panel>
+
+	<StackPanel ux:Template="page2" Color="#8CB293" ItemSpacing="50">
+		<Text Value="나의 얼굴은?" Font="text1" TextColor="#EEFCFB" FontSize="80" Y="20" Alignment="TopCenter" />
+		<Rectangle Clicked="{gotothird}" Color="#EEFCFB" Width="300" Height="200" Y="20">
+			<Image Clicked="{gotothird}" File="고구마.png" Width="100" />
+		</Rectangle>
+		<Rectangle Clicked="{gototwelfth}" Color="#EEFCFB" Width="300" Height="200" Y="30">
+			<Image Clicked="{gototwelfth}" File="감자.png" Width="300" Height="300" X="-20" />
+		</Rectangle>
+	</StackPanel>
+
+	<Panel ux:Template="page3" Color="#8CB293">
+		<Text Value="나의 눈은?" Font="text1" TextColor="#EEFCFB" FontSize="80" Y="20" Alignment="TopCenter" />
+		<Rectangle Color="#EEFCFB" Width="300" Height="500" Alignment="Center" Y="40">
+		<Image Clicked="{gotofourth}" File="눈1.png" Width="200" Alignment="CenterLeft" Y="-190" X="-15" />
+		<Image Clicked="{gotofifth}" File="눈2.png" Width="230" Y="-60" Alignment="CenterLeft" X="-50" />
+		<Image Clicked="{gotosixth}" File="눈3.png" Width="150" Alignment="CenterLeft" Y="60" X="8" />
+		<Image Clicked="{gotoseventh}" File="눈4.png" X="2" Alignment="CenterLeft" Y="200" Width="150" />
+		<Image Clicked="{gotoeighth}" File="눈5.png" Width="200" Alignment="CenterRight" X="20" Y="-190" />
+		<Image Clicked="{gotoninth}" File="눈6.png" Width="200" Alignment="CenterRight" Y="-60" X="25" />
+		<Image Clicked="{gototenth}" File="눈7.png" Alignment="CenterRight" Width="150" Y="60" />
+		<Image Clicked="{gotoelevnth}" File="눈8.png" Width="150" Alignment="CenterRight" Y="200" X="-10" />
+		</Rectangle>
+
+	</Panel>
+
+	<Panel ux:Template="seye1" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈1.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="20" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye2" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="280" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈2.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye3" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+			<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈3.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye4" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="220" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈4.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="10" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye5" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈5.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="10" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye6" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈6.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="10" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye7" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-25" Y="18" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="230" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈7.png" Width="{Property slider1.Value}" Alignment="Center" Y="-110" X="10" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="seye8" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="45" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="20" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈8.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="고구마.png" Width="250" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="page4" Color="#8CB293">
+		<Text Value="나의 눈은?" Font="text1" TextColor="#EEFCFB" FontSize="80" Y="20" Alignment="TopCenter" />
+		<Rectangle Color="#EEFCFB" Width="300" Height="500" Alignment="Center" Y="40">
+		<Image Clicked="{gotothirteenth}" File="눈1.png" Width="200" Alignment="CenterLeft" Y="-190" X="-15" />
+		<Image Clicked="{gotofourteenth}" File="눈2.png" Width="230" Y="-60" Alignment="CenterLeft" X="-50" />
+		<Image Clicked="{gotofifteenth}" File="눈3.png" Width="150" Alignment="CenterLeft" Y="60" X="8" />
+		<Image Clicked="{gotosixteenth}" File="눈4.png" X="2" Alignment="CenterLeft" Y="200" Width="150" />
+		<Image Clicked="{gotoseventeenth}" File="눈5.png" Width="200" Alignment="CenterRight" X="20" Y="-190" />
+		<Image Clicked="{gotoeighteenth}" File="눈6.png" Width="200" Alignment="CenterRight" Y="-60" X="25" />
+		<Image Clicked="{gotonineteenth}" File="눈7.png" Alignment="CenterRight" Width="150" Y="60" />
+		<Image Clicked="{gototwentieth}" File="눈8.png" Width="150" Alignment="CenterRight" Y="200" X="-10" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye1" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈1.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="50" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye2" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈2.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="30" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye3" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈3.png" Width="{Property slider1.Value}" Alignment="Center" Y="-90" X="40" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye4" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈4.png" Width="{Property slider1.Value}" Alignment="Center" Y="-80" X="50" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye5" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈5.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="50" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye6" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="45" />
+			<Image File="입4.png" Width="{Property slider2.Value}" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈6.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="50" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye7" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" Y="10" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="50" />
+			<Image File="입4.png" Width="{Property slider2.Value}" Alignment="Center" Y="10" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈7.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="50" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+
+	<Panel ux:Template="peye8" Color="#8CB293">
+		<PageControl Opacity="1" Orientation="Horizontal" Width="300" Height="200">
+			<Image File="입1.png" Width="{Property slider2.Value}" Alignment="Center" X="-20" Y="10" />
+			<Image File="입2.png" Width="{Property slider2.Value}" Alignment="Center" Y="25" />
+			<Image File="입3.png" Width="{Property slider2.Value}" Alignment="Center" X="-15" Y="50" />
+			<Image File="입4.png" Width="{Property slider2.Value}" Alignment="Center" Y="10" />
+			<Image File="입6.png" Width="{Property slider2.Value}" Y="35" />
+			<Image File="입8.png" Width="{Property slider2.Value}" />
+		</PageControl>
+		<Text Value="나의 눈과 입은?" Font="text1" TextColor="#EEFCFB" Y="30" Alignment="TopCenter" FontSize="60" />
+		<Text Value="눈의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-115" />
+		<Slider ux:Name="slider1" Value="150" Minimum="100" Maximum="200" Width="300" UserStep="1" Alignment="BottomCenter" Y="-140" />
+		<Text Value="입의 크기를 정해주세요" Font="text1" TextColor="#EEFCFB" FontSize="30" Alignment="BottomCenter" Y="-40" />
+		<Text Value="입을 옆으로 넘기면 또 다른 입이 나옵니다." Font="text1" TextColor="#EEFCFB" FontSize="18" Alignment="BottomLeft" />
+		<Slider ux:Name="slider2" Value="150" Minimum="100" Maximum="250" Width="300" UserStep="1" Alignment="BottomCenter" Y="-70" />
+		<Image File="눈8.png" Width="{Property slider1.Value}" Alignment="Center" Y="-100" X="40" />
+		<Rectangle Clicked="{gotofirst}" Width="60" Color="#AA2424" Alignment="BottomRight" Height="60">
+			<Image File="화살표.png" Clicked="{gotofirst}" Width="60" Height="60" Color="#E61543" />
+		</Rectangle>
+		<Rectangle Color="#EEFCFB" Width="300" Alignment="Center" Height="350" Y="-50">
+			<Image File="감자.png" Width="700" Height="700" X="-70" Alignment="Center" />
+		</Rectangle>
+	</Panel>
+	</Navigator>
+</App>
